@@ -1,0 +1,141 @@
+======== Asset info hopper: ========
+Got 23 bodies, 22 joints, and 4 DOFs
+Bodies:
+  0: 'base_link'
+  1: 'pelvis'
+  2: 'biceps_femoris_long_a'
+  3: 'gluteus_maximus_a'
+  4: 'femur'
+  5: 'biceps_femoris_short_a'
+  6: 'gastrocnemius_a'
+  7: 'gluteus_maximus_b'
+  8: 'tibia'
+  9: 'foot'
+ 10: 'gastrocnemius_b'
+ 11: 'soleus_b'
+ 12: 'tibialis_anterior_b'
+ 13: 'biceps_femoris_long_b'
+ 14: 'biceps_femoris_short_b'
+ 15: 'rectus_femoris_b'
+ 16: 'soleus_a'
+ 17: 'tibialis_anterior_a'
+ 18: 'vastus_intermedius_b'
+ 19: 'psoas_major_b'
+ 20: 'vastus_intermedius_a'
+ 21: 'psoas_major_a'
+ 22: 'rectus_femoris_a'
+Joints:
+  0: 'linear' (Prismatic)
+  1: 'biceps_femoris_long_a' (Fixed)
+  2: 'gluteus_maximus_a' (Fixed)
+  3: 'hipjoint' (Revolute)
+  4: 'biceps_femoris_short_a' (Fixed)
+  5: 'gastrocnemius_a' (Fixed)
+  6: 'gluteus_maximus_b' (Fixed)
+  7: 'kneejoint' (Revolute)
+  8: 'anklejoint' (Revolute)
+  9: 'gastrocnemius_b' (Fixed)
+ 10: 'soleus_b' (Fixed)
+ 11: 'tibialis_anterior_b' (Fixed)
+ 12: 'biceps_femoris_long_b' (Fixed)
+ 13: 'biceps_femoris_short_b' (Fixed)
+ 14: 'rectus_femoris_b' (Fixed)
+ 15: 'soleus_a' (Fixed)
+ 16: 'tibialis_anterior_a' (Fixed)
+ 17: 'vastus_intermedius_b' (Fixed)
+ 18: 'psoas_major_b' (Fixed)
+ 19: 'vastus_intermedius_a' (Fixed)
+ 20: 'psoas_major_a' (Fixed)
+ 21: 'rectus_femoris_a' (Fixed)
+DOFs:
+  0: 'linear' (Translation)
+  1: 'hipjoint' (Rotation)
+  2: 'kneejoint' (Rotation)
+  3: 'anklejoint' (Rotation)
+=== Environment info: ================================================
+1 actors total
+
+===== Actor: hopper =======================================
+
+Bodies
+['base_link', 'pelvis', 'biceps_femoris_long_a', 'gluteus_maximus_a', 'femur', 'biceps_femoris_short_a', 'gastrocnemius_a', 'gluteus_maximus_b', 'tibia', 'foot', 'gastrocnemius_b', 'soleus_b', 'tibialis_anterior_b', 'biceps_femoris_long_b', 'biceps_femoris_short_b', 'rectus_femoris_b', 'soleus_a', 'tibialis_anterior_a', 'vastus_intermedius_b', 'psoas_major_b', 'vastus_intermedius_a', 'psoas_major_a', 'rectus_femoris_a']
+{'base_link': 0, 'biceps_femoris_long_a': 2, 'biceps_femoris_long_b': 13, 'biceps_femoris_short_a': 5, 'biceps_femoris_short_b': 14, 'femur': 4, 'foot': 9, 'gastrocnemius_a': 6, 'gastrocnemius_b': 10, 'gluteus_maximus_a': 3, 'gluteus_maximus_b': 7, 'pelvis': 1, 'psoas_major_a': 21, 'psoas_major_b': 19, 'rectus_femoris_a': 22, 'rectus_femoris_b': 15, 'soleus_a': 16, 'soleus_b': 11, 'tibia': 8, 'tibialis_anterior_a': 17, 'tibialis_anterior_b': 12, 'vastus_intermedius_a': 20, 'vastus_intermedius_b': 18}
+
+Joints
+['linear', 'biceps_femoris_long_a', 'gluteus_maximus_a', 'hipjoint', 'biceps_femoris_short_a', 'gastrocnemius_a', 'gluteus_maximus_b', 'kneejoint', 'anklejoint', 'gastrocnemius_b', 'soleus_b', 'tibialis_anterior_b', 'biceps_femoris_long_b', 'biceps_femoris_short_b', 'rectus_femoris_b', 'soleus_a', 'tibialis_anterior_a', 'vastus_intermedius_b', 'psoas_major_b', 'vastus_intermedius_a', 'psoas_major_a', 'rectus_femoris_a']
+{'anklejoint': 8, 'biceps_femoris_long_a': 1, 'biceps_femoris_long_b': 12, 'biceps_femoris_short_a': 4, 'biceps_femoris_short_b': 13, 'gastrocnemius_a': 5, 'gastrocnemius_b': 9, 'gluteus_maximus_a': 2, 'gluteus_maximus_b': 6, 'hipjoint': 3, 'kneejoint': 7, 'linear': 0, 'psoas_major_a': 20, 'psoas_major_b': 18, 'rectus_femoris_a': 21, 'rectus_femoris_b': 14, 'soleus_a': 15, 'soleus_b': 10, 'tibialis_anterior_a': 16, 'tibialis_anterior_b': 11, 'vastus_intermedius_a': 19, 'vastus_intermedius_b': 17}
+
+ Degrees Of Freedom (DOFs)
+['linear', 'hipjoint', 'kneejoint', 'anklejoint']
+{'anklejoint': 3, 'hipjoint': 1, 'kneejoint': 2, 'linear': 0}
+
+Poses from Body State:
+[((0.00000000e+00,  0.0000000e+00,  0.00000000e+00), (-0.7071068,  0.0000000e+00, 0.0000000e+00, 0.7071068 ))
+ ((7.45058060e-09, -2.9802322e-07, -5.58793545e-09), (-0.7071069, -2.4214387e-08, 2.4214387e-08, 0.7071069 ))
+ ((1.20000035e-01,  9.3986028e-01,  7.20351562e-02), (-0.7071068, -1.8626451e-09, 1.8626451e-09, 0.7071068 ))
+ ((1.20000035e-01,  9.2580026e-01,  5.59761524e-02), (-0.7071068, -1.8626451e-09, 1.8626451e-09, 0.7071068 ))
+ ((1.20000035e-01,  9.2000026e-01, -1.99998915e-02), (-0.7071069, -2.2600076e-08, 2.3510223e-08, 0.7071069 ))
+ ((1.20000057e-01,  6.1738008e-01, -9.89149660e-02), (-0.7071068, -2.2600073e-08, 2.3510220e-08, 0.7071068 ))
+ ((1.20000064e-01,  5.2585006e-01, -1.30710006e-01), (-0.7071068, -2.2600073e-08, 2.3510220e-08, 0.7071068 ))
+ ((1.20000042e-01,  8.3440626e-01, -1.72182843e-02), (-0.7071068, -2.2600073e-08, 2.3510220e-08, 0.7071068 ))
+ ((1.20000064e-01,  5.0000000e-01, -1.81549996e-01), (-0.7071068, -2.2600075e-08, 2.3510221e-08, 0.70710677))
+ ((1.20000094e-01,  8.0000035e-02, -1.99999660e-02), (-0.7071068, -2.2600076e-08, 2.3510223e-08, 0.70710677))
+ ((1.20000094e-01,  5.2205041e-02,  4.92710397e-02), (-0.7071068, -2.2600076e-08, 2.3510223e-08, 0.70710677))
+ ((1.20000094e-01,  6.4707041e-02,  3.81210372e-02), (-0.7071068, -2.2600076e-08, 2.3510223e-08, 0.70710677))
+ ((1.20000094e-01,  7.8312822e-02, -1.13652959e-01), (-0.7071068, -2.3349633e-08, 2.1805050e-08, 0.7071068 ))
+ ((1.20000072e-01,  4.5179206e-01, -1.21012993e-01), (-0.7071068, -2.2600075e-08, 2.3510221e-08, 0.70710677))
+ ((1.20000064e-01,  4.6751004e-01, -1.28676996e-01), (-0.7071068, -2.2600075e-08, 2.3510221e-08, 0.70710677))
+ ((1.20000064e-01,  5.1417905e-01, -2.34924018e-01), (-0.7071068, -2.2600075e-08, 2.3510221e-08, 0.70710677))
+ ((1.20000079e-01,  2.6259002e-01, -5.23699671e-02), (-0.7071068, -2.2600075e-08, 2.3510221e-08, 0.70710677))
+ ((1.20000087e-01,  2.0609999e-01, -1.04094975e-01), (-0.7071068, -2.2600075e-08, 2.3510221e-08, 0.70710677))
+ ((1.20000064e-01,  4.9389225e-01, -2.32026011e-01), (-0.7071068, -2.2600075e-08, 2.3510221e-08, 0.70710677))
+ ((1.20000042e-01,  8.3720225e-01, -8.74099210e-02), (-0.7071068, -2.2600073e-08, 2.3510220e-08, 0.7071068 ))
+ ((1.20000057e-01,  6.4099014e-01, -1.64770007e-01), (-0.7071068, -2.2600073e-08, 2.3510220e-08, 0.7071068 ))
+ ((1.20000035e-01,  9.3986028e-01, -1.09199956e-01), (-0.7071068, -1.8626451e-09, 1.8626451e-09, 0.7071068 ))
+ ((1.20000035e-01,  9.5077032e-01, -1.28679976e-01), (-0.7071068, -1.8626451e-09, 1.8626451e-09, 0.7071068 ))]
+
+Velocities from Body State:
+[((0., 0., 0.), (0., 0., 0.)) ((0., 0., 0.), (0., 0., 0.))
+ ((0., 0., 0.), (0., 0., 0.)) ((0., 0., 0.), (0., 0., 0.))
+ ((0., 0., 0.), (0., 0., 0.)) ((0., 0., 0.), (0., 0., 0.))
+ ((0., 0., 0.), (0., 0., 0.)) ((0., 0., 0.), (0., 0., 0.))
+ ((0., 0., 0.), (0., 0., 0.)) ((0., 0., 0.), (0., 0., 0.))
+ ((0., 0., 0.), (0., 0., 0.)) ((0., 0., 0.), (0., 0., 0.))
+ ((0., 0., 0.), (0., 0., 0.)) ((0., 0., 0.), (0., 0., 0.))
+ ((0., 0., 0.), (0., 0., 0.)) ((0., 0., 0.), (0., 0., 0.))
+ ((0., 0., 0.), (0., 0., 0.)) ((0., 0., 0.), (0., 0., 0.))
+ ((0., 0., 0.), (0., 0., 0.)) ((0., 0., 0.), (0., 0., 0.))
+ ((0., 0., 0.), (0., 0., 0.)) ((0., 0., 0.), (0., 0., 0.))
+ ((0., 0., 0.), (0., 0., 0.))]
+
+Body 'base_link' has position (0., 0., 0.)
+Body 'pelvis' has position (7.450581e-09, -2.9802322e-07, -5.5879354e-09)
+Body 'biceps_femoris_long_a' has position (0.12000003, 0.9398603, 0.07203516)
+Body 'gluteus_maximus_a' has position (0.12000003, 0.92580026, 0.05597615)
+Body 'femur' has position (0.12000003, 0.92000026, -0.01999989)
+Body 'biceps_femoris_short_a' has position (0.12000006, 0.6173801, -0.09891497)
+Body 'gastrocnemius_a' has position (0.12000006, 0.52585006, -0.13071)
+Body 'gluteus_maximus_b' has position (0.12000004, 0.83440626, -0.01721828)
+Body 'tibia' has position (0.12000006, 0.5, -0.18155)
+Body 'foot' has position (0.12000009, 0.08000004, -0.01999997)
+Body 'gastrocnemius_b' has position (0.12000009, 0.05220504, 0.04927104)
+Body 'soleus_b' has position (0.12000009, 0.06470704, 0.03812104)
+Body 'tibialis_anterior_b' has position (0.12000009, 0.07831282, -0.11365296)
+Body 'biceps_femoris_long_b' has position (0.12000007, 0.45179206, -0.12101299)
+Body 'biceps_femoris_short_b' has position (0.12000006, 0.46751004, -0.128677)
+Body 'rectus_femoris_b' has position (0.12000006, 0.51417905, -0.23492402)
+Body 'soleus_a' has position (0.12000008, 0.26259002, -0.05236997)
+Body 'tibialis_anterior_a' has position (0.12000009, 0.20609999, -0.10409497)
+Body 'vastus_intermedius_b' has position (0.12000006, 0.49389225, -0.23202601)
+Body 'psoas_major_b' has position (0.12000004, 0.83720225, -0.08740992)
+Body 'vastus_intermedius_a' has position (0.12000006, 0.64099014, -0.16477)
+Body 'psoas_major_a' has position (0.12000003, 0.9398603, -0.10919996)
+Body 'rectus_femoris_a' has position (0.12000003, 0.9507703, -0.12867998)
+
+DOF states:
+[(0., 0.) (0., 0.) (0., 0.) (0., 0.)]
+
+DOF 'linear' has position 0.0
+DOF 'hipjoint' has position 0.0
+DOF 'kneejoint' has position 0.0
+DOF 'anklejoint' has position 0.0

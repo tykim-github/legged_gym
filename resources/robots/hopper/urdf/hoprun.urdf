@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com)  Commit Version: 1.6.0-4-g7f85cfe Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="hopper">
+  <link name="pelvis">
+    <inertial>
+      <origin xyz="0.0 0.02 0.3" rpy="0 0 0" />
+      <mass value="15" />
+      <inertia ixx="0.052666" ixy="0" ixz="0.0034676" iyy="0.071815" iyz="0" izz="0.11746" />
+    </inertial>
+    <visual>
+      <origin xyz="0.0 0.02 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.07 0.5"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.02 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.1 0.1"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="femur">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+      <mass value="4" />
+      <inertia ixx="0.043371" ixy="0" ixz="0" iyy="0.03793" iyz="0.014142" izz="0.0066034" />
+    </inertial>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/femur.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="tibia">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+      <mass value="1.9" />
+      <inertia ixx="0.049785" ixy="0" ixz="0" iyy="0.042507" iyz="-0.017043" izz="0.0084955" />
+    </inertial>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/tibia.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="foot">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+      <mass value="0.6" />
+      <inertia ixx="0.017181" ixy="0" ixz="0" iyy="0.0027601" iyz="0.00064537" izz="0.017764" />
+    </inertial>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/foot.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.2 -0.05" rpy="1.57 0 1.57" />
+      <geometry>
+        <cylinder radius="0.03" length="1.2"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.0 -0.1 -0.05" rpy="1.57 0 1.57" />
+      <geometry>
+        <cylinder radius="0.03" length="1.2"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="soleus_b">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="soleus_b" type="fixed">
+    <origin xyz="0 -0.068834 0.0077416" rpy="0 0 0" />
+    <parent link="foot" />
+    <child link="soleus_b" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="tibialis_anterior_b">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="tibialis_anterior_b" type="fixed">
+    <origin xyz="0 0.093653 -0.0016872" rpy="0 0 0" />
+    <parent link="foot" />
+    <child link="tibialis_anterior_b" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="gastrocnemius_b">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="gastrocnemius_b" type="fixed">
+    <origin xyz="0 -0.070718 0.029013" rpy="0 0 0" />
+    <parent link="foot" />
+    <child link="gastrocnemius_b" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="rectus_femoris_b">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="rectus_femoris_b" type="fixed">
+    <origin xyz="0 0.083993 0.063018" rpy="0 0 0" />
+    <parent link="tibia" />
+    <child link="rectus_femoris_b" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="biceps_femoris_long_b">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="biceps_femoris_long_b" type="fixed">
+    <origin xyz="0 -0.09911 -0.084823" rpy="0 0 0" />
+    <parent link="tibia" />
+    <child link="biceps_femoris_long_b" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="vastus_intermedius_b">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="vastus_intermedius_b" type="fixed">
+    <origin xyz="0 0.038351 0.075621" rpy="0 0 0" />
+    <parent link="tibia" />
+    <child link="vastus_intermedius_b" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="biceps_femoris_short_b">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="biceps_femoris_short_b" type="fixed">
+    <origin xyz="0 -0.085983 -0.059535" rpy="0 0 0" />
+    <parent link="tibia" />
+    <child link="biceps_femoris_short_b" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="soleus_a">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="soleus_a" type="fixed">
+    <origin xyz="0 -0.13 -0.23741" rpy="0 0 0" />
+    <parent link="tibia" />
+    <child link="soleus_a" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="tibialis_anterior_a">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="tibialis_anterior_a" type="fixed">
+    <origin xyz="0 -0.017455 -0.1839" rpy="0 0 0" />
+    <parent link="tibia" />
+    <child link="tibialis_anterior_a" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="psoas_major_b">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="psoas_major_b" type="fixed">
+    <origin xyz="0 0.09741 -0.112798" rpy="0 0 0" />
+    <parent link="femur" />
+    <child link="psoas_major_b" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="gluteus_maximus_b">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="gluteus_maximus_b" type="fixed">
+    <origin xyz="0 -0.0927816 0.045594" rpy="0 0 0" />
+    <parent link="femur" />
+    <child link="gluteus_maximus_b" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="vastus_intermedius_a">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="vastus_intermedius_a" type="fixed">
+    <origin xyz="0 0.14477 -0.18901" rpy="0 0 0" />
+    <parent link="femur" />
+    <child link="vastus_intermedius_a" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="biceps_femoris_short_a">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="biceps_femoris_short_a" type="fixed">
+    <origin xyz="0 0.048915 -0.22262" rpy="0 0 0" />
+    <parent link="femur" />
+    <child link="biceps_femoris_short_a" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="gastrocnemius_a">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="gastrocnemius_a" type="fixed">
+    <origin xyz="0 0.05071 -0.36415" rpy="0 0 0" />
+    <parent link="femur" />
+    <child link="gastrocnemius_a" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="rectus_femoris_a">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="rectus_femoris_a" type="fixed">
+    <origin xyz="0.0 0.13 0.10077" rpy="0 0 0" />
+    <parent link="pelvis" />
+    <child link="rectus_femoris_a" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="psoas_major_a">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="psoas_major_a" type="fixed">
+    <origin xyz="0.0 0.1092 0.15986" rpy="0 0 0" />
+    <parent link="pelvis" />
+    <child link="psoas_major_a" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="gluteus_maximus_a">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="gluteus_maximus_a" type="fixed">
+    <origin xyz="0.0 -0.075976 0.0758" rpy="0 0 0" />
+    <parent link="pelvis" />
+    <child link="gluteus_maximus_a" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="biceps_femoris_long_a">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.01"/>
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint name="biceps_femoris_long_a" type="fixed">
+    <origin xyz="0.0 -0.072035 -0.03986" rpy="0 0 0" />
+    <parent link="pelvis" />
+    <child link="biceps_femoris_long_a" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+
+  <joint name="hipjoint" type="revolute">
+    <origin xyz="0.0 0.02 0.0" rpy="0 0 0" />
+    <parent link="pelvis" />
+    <child link="femur" />
+    <axis xyz="-1 0 0" />
+    <limit lower="-1.1" upper="1.5" effort="100" velocity="10" />
+  </joint>
+  <joint name="kneejoint" type="revolute">
+    <origin xyz="0 0.16155 -0.42" rpy="0 0 0" />
+    <parent link="femur" />
+    <child link="tibia" />
+    <axis xyz="-1 0 0" />
+    <limit lower="-0.7" upper="2.0" effort="100" velocity="10" />
+  </joint>
+  <joint name="anklejoint" type="revolute">
+    <origin xyz="0 -0.16155 -0.42" rpy="0 0 0" />
+    <parent link="tibia" />
+    <child link="foot" />
+    <axis xyz="-1 0 0" />
+    <limit lower="-1.2" upper="1.7" effort="100" velocity="10" />
+  </joint>
+</robot>

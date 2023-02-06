@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com)  Commit Version: 1.6.0-4-g7f85cfe Build Version: 1.6.7995.38578 For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="hopper">
+  <link name="pelvis">
+    <inertial>
+      <origin xyz="0.0 0.04 0.15" rpy="0 0 0" />
+      <mass value="5" />
+      <inertia ixx="0.052666" ixy="0" ixz="0.0034676" iyy="0.071815" iyz="0" izz="0.11746" />
+    </inertial>
+    <visual>
+      <origin xyz="0.0 0.04 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.15 0.3"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.04 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.2 0.35"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="femur">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+      <mass value="4" />
+      <inertia ixx="0.043371" ixy="0" ixz="0" iyy="0.03793" iyz="0.014142" izz="0.0066034" />
+    </inertial>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/femur.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="tibia">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+      <mass value="1.9" />
+      <inertia ixx="0.049785" ixy="0" ixz="0" iyy="0.042507" iyz="-0.017043" izz="0.0084955" />
+    </inertial>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/tibia.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="foot">
+    <inertial>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+      <mass value="0.6" />
+      <inertia ixx="0.017181" ixy="0" ixz="0" iyy="0.0027601" iyz="0.00064537" izz="0.017764" />
+    </inertial>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/foot.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0.05 -0.05" rpy="0 0 0" />
+      <geometry>
+        <!-- <mesh filename="../meshes/foot.STL" /> -->
+        <box size="1.2 0.3 0.05"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="hipjoint" type="revolute">
+    <origin xyz="0.0 0.02 0.0" rpy="0 0 0" />
+    <parent link="pelvis" />
+    <child link="femur" />
+    <axis xyz="-1 0 0" />
+    <limit lower="-0.5" upper="0.6" effort="100" velocity="10" />
+  </joint>
+  <joint name="kneejoint" type="revolute">
+    <origin xyz="0 0.16155 -0.42" rpy="0 0 0" />
+    <parent link="femur" />
+    <child link="tibia" />
+    <axis xyz="-1 0 0" />
+    <limit lower="-0.7" upper="1.3" effort="100" velocity="10" />
+  </joint>
+  <joint name="anklejoint" type="revolute">
+    <origin xyz="0 -0.16155 -0.42" rpy="0 0 0" />
+    <parent link="tibia" />
+    <child link="foot" />
+    <axis xyz="-1 0 0" />
+    <limit lower="-0.6" upper="1" effort="100" velocity="10" />
+  </joint>
+</robot>
